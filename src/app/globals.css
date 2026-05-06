@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-steel-600 hover:bg-steel-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors;
+  }
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
+  }
+  .prose-dark {
+    @apply text-gray-300 leading-relaxed;
+  }
+  .prose-dark h1 { @apply text-2xl font-bold text-white mb-4 mt-6; }
+  .prose-dark h2 { @apply text-xl font-bold text-steel-400 mb-3 mt-5; }
+  .prose-dark h3 { @apply text-lg font-semibold text-gray-200 mb-2 mt-4; }
+  .prose-dark p  { @apply mb-3; }
+  .prose-dark ul { @apply list-disc list-inside mb-3 space-y-1; }
+  .prose-dark ol { @apply list-decimal list-inside mb-3 space-y-1; }
+  .prose-dark li { @apply ml-2; }
+  .prose-dark strong { @apply text-white font-semibold; }
+  .prose-dark blockquote { @apply border-l-4 border-steel-500 pl-4 py-2 bg-gray-800 rounded-r-lg my-4 italic; }
+  .prose-dark code { @apply bg-gray-800 text-steel-300 px-1 rounded text-sm; }
+  .prose-dark pre  { @apply bg-gray-800 rounded-lg p-4 overflow-x-auto my-4 text-sm; }
+  .prose-dark table { @apply w-full border-collapse my-4; }
+  .prose-dark th { @apply bg-gray-800 text-steel-300 px-4 py-2 text-left border border-gray-700; }
+  .prose-dark td { @apply px-4 py-2 border border-gray-700; }
+  .prose-dark tr:nth-child(even) td { @apply bg-gray-800/50; }
+}

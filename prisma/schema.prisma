@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+
+  progress    Progress[]
+  quizResults QuizResult[]
+}
+
+model Chapter {
+  id      String @id @default(cuid())
+  part    String
+  order   Int
+  title   String
+  summary String
+  content String @db.Text
+
+  quizzes  Quiz[]
+  progress Progress[]
+}
+
+model Progress {
+  id          String    @id @default(cuid())
+  userId      String
+  chapterId   String
+  completed   Boolean   @default(false)
+  completedAt DateTime?
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, chapterId])
+}
+
+model Quiz {
+  id            String @id @default(cuid())
+  chapterId     String
+  question      String
+  options       Json
+  correctAnswer Int
+  explanation   String
+
+  chapter     Chapter      @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  quizResults QuizResult[]
+}
+
+model QuizResult {
+  id          String   @id @default(cuid())
+  userId      String
+  quizId      String
+  answer      Int
+  isCorrect   Boolean
+  answeredAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz Quiz @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, quizId])
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}

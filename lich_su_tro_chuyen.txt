@@ -1,0 +1,627 @@
+================================================================================
+LỊCH SỬ TRÒ CHUYỆN VỚI CLAUDE CODE
+Ngày: 02/05/2026
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+hướng dẫn cơ bản về lập trình cho người non tech. tôi cần hướng dẫn dễ hiểu
+cho người mới tiếp cận lĩnh vực này. đầu tiên bạn nghiên cứu và phân tích cho
+tôi các kiến thức cần nắm được. sau đó mới giải thích chi tiết từng bước.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BƯỚC 1: PHÂN TÍCH — NGƯỜI MỚI CẦN NẮM NHỮNG GÌ?
+
+Lập trình gồm 4 tầng kiến thức:
+
+  Tầng 1: Tư duy          → Máy tính nghĩ như thế nào?
+  Tầng 2: Khái niệm cốt lõi → Biến, điều kiện, vòng lặp, hàm
+  Tầng 3: Ngôn ngữ        → Cách viết những khái niệm đó
+  Tầng 4: Thực hành       → Xây dựng thứ gì đó thật sự
+
+BƯỚC 2: GIẢI THÍCH CHI TIẾT TỪNG TẦNG
+
+────────────────────────────────────────
+TẦNG 1 — Máy tính nghĩ như thế nào?
+────────────────────────────────────────
+Máy tính không thông minh. Nó chỉ làm đúng những gì bạn bảo, theo thứ tự
+bạn đặt ra. Hãy tưởng tượng bạn hướng dẫn người nước ngoài nấu phở:
+
+  "Đun nước. Khi nước sôi, cho xương vào. Đợi 3 tiếng..."
+
+Đây chính là lập trình: một chuỗi lệnh rõ ràng, theo thứ tự, không mơ hồ.
+
+────────────────────────────────────────
+TẦNG 2 — 4 khái niệm cốt lõi
+────────────────────────────────────────
+
+1. BIẾN (Variable)
+   Biến là hộp chứa thông tin, có nhãn để tìm lại.
+
+   ten = "Minh"
+   tuoi = 25
+   luong = 15000000
+
+2. ĐIỀU KIỆN (If/Else)
+   Cho máy tính khả năng "nếu... thì... không thì..."
+
+   nếu (số_dư >= số_muốn_rút):
+       cho rút tiền
+   không thì:
+       hiện thông báo "Số dư không đủ"
+
+3. VÒNG LẶP (Loop)
+   Làm một việc nhiều lần mà không cần viết lại nhiều lần.
+
+   với mỗi khách_hàng trong danh_sách:
+       gửi email "Chúc mừng sinh nhật " + tên_khách
+
+4. HÀM (Function)
+   Đóng gói một nhóm lệnh vào một tên, để dùng lại nhiều lần.
+
+   hàm tinh_tien(so_luong, don_gia):
+       tong = so_luong * don_gia
+       tra_ve tong
+
+────────────────────────────────────────
+TẦNG 3 — Chọn ngôn ngữ đầu tiên
+────────────────────────────────────────
+Khuyến nghị: Python
+- Cú pháp gần tiếng Anh tự nhiên, dễ đọc
+- Ứng dụng rộng: AI, dữ liệu, web, tự động hóa
+- Cộng đồng lớn nhất thế giới
+- Nhu cầu tuyển dụng cao
+
+────────────────────────────────────────
+TẦNG 4 — Lộ trình thực hành
+────────────────────────────────────────
+  Tuần 1–2:   Cài Python, làm quen, thực hành 4 khái niệm cốt lõi
+  Tuần 3–4:   Làm bài tập nhỏ (máy tính bỏ túi, đoán số...)
+  Tháng 2:    Học tổ chức code lớn hơn
+  Tháng 3–4:  Làm 1 dự án nhỏ hoàn chỉnh
+
+Nguyên tắc: Đọc lý thuyết 20%, thực hành 80%.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+tôi muốn kiến thức cho 3 buổi đầu tiên, dễ hiểu, đúng, đủ
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Công cụ cần cài: Python (python.org/downloads) + VS Code (code.visualstudio.com)
+
+════════════════════════════════════════
+BUỔI 1 — Biến và Kiểu Dữ Liệu
+════════════════════════════════════════
+Mục tiêu: Biết cách lưu thông tin vào máy tính và in ra màn hình.
+
+1.1 — In ra màn hình
+  print("Xin chào!")
+  print("Tôi đang học lập trình")
+
+1.2 — Biến
+  ten = "Minh"
+  tuoi = 25
+  luong = 15000000
+  print(ten)   # In ra: Minh
+
+1.3 — Kiểu dữ liệu
+  - Số nguyên (int):    5, 100, -3
+  - Số thập phân (float): 9.5, 3.14
+  - Chữ/Chuỗi (str):   "Minh", "Hà Nội"
+  - Đúng/Sai (bool):   True, False
+
+1.4 — Phép tính với số
+  a + b   # Cộng
+  a - b   # Trừ
+  a * b   # Nhân
+  a / b   # Chia
+  a ** b  # Lũy thừa
+
+1.5 — Ghép chuỗi với f-string
+  ten = "Minh"
+  tuoi = 25
+  print(f"Tên tôi là {ten}, tôi {tuoi} tuổi")
+
+Bài tập:
+  1. Tạo biến lưu họ tên, tuổi, thành phố. In ra câu giới thiệu.
+  2. Tính tiền hóa đơn: 4 ly cà phê (35k) + 2 bánh mì (15k).
+  3. Tính số ngày bạn đã sống (tuổi × 365).
+
+════════════════════════════════════════
+BUỔI 2 — Điều Kiện
+════════════════════════════════════════
+Mục tiêu: Dạy máy tính ra quyết định dựa trên dữ liệu.
+
+2.1 — So sánh
+  5 > 3   → True
+  5 == 5  → True  (dùng == không phải =)
+  5 != 3  → True
+
+2.2 — if / else
+  tuoi = 17
+  if tuoi >= 18:
+      print("Được vào")
+  else:
+      print("Chưa đủ tuổi")
+
+2.3 — if / elif / else
+  diem = 7.5
+  if diem >= 9:
+      print("Xuất sắc")
+  elif diem >= 8:
+      print("Giỏi")
+  elif diem >= 6.5:
+      print("Khá")
+  else:
+      print("Yếu")
+
+2.4 — Kết hợp điều kiện
+  if tuoi >= 18 and co_ve == True:
+      print("Được vào rạp")
+
+  if la_hoi_vien or co_ma_giam_gia:
+      print("Được giảm giá")
+
+2.5 — Nhận dữ liệu từ người dùng
+  ten = input("Bạn tên gì? ")
+  tuoi = int(input("Nhập tuổi: "))
+
+Bài tập:
+  1. Nhập điểm (0-10), in ra xếp loại.
+  2. Nhập số tiền và giá món đồ, in ra "Đủ tiền" hoặc "Thiếu X đồng".
+  3. Nhập tháng sinh, in ra mùa tương ứng.
+
+════════════════════════════════════════
+BUỔI 3 — Vòng Lặp và Hàm
+════════════════════════════════════════
+Mục tiêu: Tránh viết lặp code. Tổ chức code thành khối tái sử dụng.
+
+3.1 — Vòng lặp for
+  mon_an = ["Phở", "Bún bò", "Cơm tấm"]
+  for mon in mon_an:
+      print(mon)
+
+  for i in range(5):     # i chạy từ 0 đến 4
+      print(f"Lần thứ {i}")
+
+3.2 — Vòng lặp while
+  so_tien = 1000000
+  while so_tien > 0:
+      chi_tieu = int(input("Chi bao nhiêu? "))
+      so_tien = so_tien - chi_tieu
+
+3.3 — break và continue
+  for i in range(10):
+      if i == 5:
+          break      # dừng khi i = 5
+
+  for i in range(10):
+      if i % 2 == 0:
+          continue   # bỏ qua số chẵn
+
+3.4 — Hàm (Function)
+  def tinh_tien(don_gia, so_luong):
+      tong = don_gia * so_luong
+      thue = tong * 0.1
+      return tong + thue
+
+  hoa_don_1 = tinh_tien(50000, 3)
+  hoa_don_2 = tinh_tien(80000, 2)
+
+Bài tập:
+  1. In bảng cửu chương số 7 bằng vòng lặp for.
+  2. Viết hàm đổi Celsius → Fahrenheit (F = C × 9/5 + 32).
+  3. Viết chương trình đoán số 1-100.
+
+Tóm tắt:
+  Buổi 1: =, print(), f"...", input()
+  Buổi 2: if, elif, else, ==, and, or
+  Buổi 3: for, while, break, def, return
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ok, kiến thức này có phù hợp để tiếp cận học ứng dụng vào claude code cho
+các công việc văn phòng không, không phải nhân viên chuyên lập trình. nếu
+kiến thức này quá nặng thì bạn hãy điều chỉnh cho phù hợp và ngược lại,
+mục tiêu đầu ra của tôi là học code đủ để ứng dụng thực hành trên claude
+code vào các công việc văn phòng bình thường, không phải chuyên code.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ĐÁNH GIÁ THẲNG THẮN:
+Kiến thức 3 buổi đó phù hợp về độ sâu, nhưng sai về mục tiêu.
+
+Hai hướng học khác nhau hoàn toàn:
+
+  Lập trình viên → Tự viết code từ đầu → Người thợ → Năm
+  Bạn (văn phòng) → Hiểu đủ để điều khiển Claude → Người chỉ đạo → Tuần
+
+Với Claude Code, bạn không cần tự viết code. Bạn cần đủ để:
+  1. Biết cái gì có thể làm được
+  2. Mô tả yêu cầu đúng để Claude hiểu
+  3. Đọc code Claude tạo ra và biết nó đang làm gì
+  4. Phát hiện khi nào kết quả sai
+
+ĐIỀU CHỈNH 3 BUỔI:
+  Giữ nguyên: phần khái niệm (biến, điều kiện, vòng lặp, hàm)
+  Bỏ bớt:    bài tập tự viết từ đầu
+  Thêm vào:  thực hành thực tế với Claude ngay từ buổi 1
+
+LỘ TRÌNH MỚI:
+  Buổi 1: Hiểu khái niệm + Biết cách chạy code Python
+  Buổi 2: Đọc hiểu code Claude viết + Biết sửa chỉnh nhỏ
+  Buổi 3: Thực hành 3-4 tác vụ văn phòng thật sự
+
+CÁC THƯ VIỆN VĂN PHÒNG CẦN BIẾT TÊN:
+  pandas      → Xử lý bảng dữ liệu, Excel
+  openpyxl    → Đọc/viết file Excel (.xlsx)
+  python-docx → Đọc/viết file Word
+  os, shutil  → Quản lý file, thư mục
+  smtplib     → Gửi email tự động
+
+KẾT LUẬN:
+  3 buổi không quá nặng. Thay đổi cần thiết là cách thực hành:
+  thay vì bài tập tự code từ đầu, dùng Claude ngay từ buổi 2
+  để giải quyết việc thật.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+thanks. hãy viết lại tài liệu để tôi học 3 buổi học đầu tiên với mục tiêu trên.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════════════════════════════════════════════
+HỌC LẬP TRÌNH ỨNG DỤNG VĂN PHÒNG VỚI CLAUDE CODE
+3 Buổi Đầu Tiên — Dành cho người không chuyên lập trình
+════════════════════════════════════════════════════════════════════════════════
+
+TRƯỚC KHI BẮT ĐẦU — HIỂU ĐÚNG VAI TRÒ CỦA BẠN
+
+Bạn không học để trở thành lập trình viên.
+Bạn học để trở thành người biết chỉ đạo Claude làm việc thay mình.
+
+  Lập trình viên:   Tự nghĩ ra giải pháp → Tự viết code → Chạy
+  Bạn (với Claude): Mô tả vấn đề → Claude viết code → Bạn chạy và kiểm tra
+
+Kiến thức lập trình bạn cần chỉ đủ để:
+  - Hiểu code Claude viết ra đang làm gì (đại ý, không cần từng dòng)
+  - Biết sửa những chỗ nhỏ (tên file, cột dữ liệu, con số)
+  - Đọc thông báo lỗi và mô tả lại cho Claude
+  - Biết cái gì có thể tự động hóa được
+
+Cài đặt một lần:
+  1. Python: python.org/downloads
+  2. VS Code: code.visualstudio.com
+  3. VS Code → cài extension "Python"
+
+────────────────────────────────────────────────────────────────────────────────
+BUỔI 1 — Hiểu Cách Máy Tính Làm Việc và Chạy Code Đầu Tiên
+────────────────────────────────────────────────────────────────────────────────
+
+PHẦN 1 — Tại sao cần hiểu code dù có Claude?
+  Claude không biết file Excel của bạn tên gì, để ở đâu, cột nào là doanh thu.
+  Bạn cần hiểu vừa đủ để làm người giám sát thông minh.
+
+PHẦN 2 — Máy tính làm việc như thế nào?
+  Thực hiện lệnh theo thứ tự từ trên xuống, chính xác tuyệt đối, không suy luận.
+
+  print("Bước 1: Mở file")
+  print("Bước 2: Đọc dữ liệu")
+  print("Bước 3: Tính toán")
+  print("Bước 4: Lưu kết quả")
+
+PHẦN 3 — Chạy code đầu tiên
+  Nhấn nút ▶ (Run) hoặc F5 trong VS Code.
+
+  print("Xin chào!")
+  print("Tôi đang học dùng Claude cho công việc văn phòng")
+  print(2024 + 1)
+
+PHẦN 4 — Biến
+  Biến = hộp chứa thông tin, có đặt tên.
+  Cú pháp: tên_biến = giá_trị
+
+  ten_file = "bao_cao_thang_5.xlsx"   # ← bạn cần sửa dòng này
+  thu_muc  = "C:/Users/NhanVien/Desktop"
+
+  Khi Claude viết code, phần biến ở đầu file là phần BẠN cần tự sửa.
+
+PHẦN 5 — Kiểu dữ liệu
+
+  Loại           Ví dụ              Dùng khi
+  ─────────────────────────────────────────────
+  int  (số nguyên)  25, 100, -3      Tuổi, số lượng
+  float (thập phân)  9.5, 3.14       Điểm, giá tiền
+  str  (chữ)       "Minh", "HN"     Tên, tên file
+  bool (đúng/sai)  True, False      Trạng thái
+
+  Quan trọng: 500 (số) khác "500" (chữ).
+
+PHẦN 6 — Cách đặt yêu cầu với Claude
+
+  Template hiệu quả:
+  ┌─────────────────────────────────────────────────────────────┐
+  │ Viết code Python để [làm gì].                               │
+  │                                                             │
+  │ Input: [tên file / loại file / file ở đâu]                  │
+  │ Cấu trúc dữ liệu: [các cột, các trường thông tin]           │
+  │ Output mong muốn: [kết quả trông như thế nào]               │
+  │ Điều kiện đặc biệt: [lọc, sắp xếp, bỏ qua gì...]           │
+  │                                                             │
+  │ Thêm ghi chú tiếng Việt vào code giải thích từng bước.     │
+  └─────────────────────────────────────────────────────────────┘
+
+BÀI TẬP BUỔI 1:
+  1. Tạo file buoi1.py, điền thông tin cá nhân vào biến, chạy thử.
+  2. Sửa biến lương và tính thuế.
+  3. Nhờ Claude viết code tính lương cho 3 nhân viên.
+
+────────────────────────────────────────────────────────────────────────────────
+BUỔI 2 — Đọc Hiểu Code và Xử Lý Khi Có Lỗi
+────────────────────────────────────────────────────────────────────────────────
+
+PHẦN 1 — Đọc code như đọc công thức nấu ăn
+
+  Khi đọc code, hỏi 3 câu:
+    1. Dữ liệu vào là gì?    (Đọc file gì, lấy thông tin gì)
+    2. Làm gì với dữ liệu?   (Tính toán, lọc, sắp xếp)
+    3. Kết quả ra là gì?     (Lưu file, in ra màn hình)
+
+  Ví dụ đọc code 3 khối:
+    ① ĐỌC FILE VÀO:    du_lieu = pd.read_excel("doanh_thu.xlsx")
+    ② XỬ LÝ:           ket_qua = du_lieu[du_lieu["Thanh_tien"] > 5000000]
+    ③ XUẤT KẾT QUẢ:   ket_qua.to_excel("loc_doanh_thu.xlsx")
+
+PHẦN 2 — Điều kiện (if / elif / else)
+
+  doanh_thu = 75000000
+
+  if doanh_thu > 100000000:
+      xep_loai = "Xuất sắc"
+  elif doanh_thu > 50000000:
+      xep_loai = "Tốt"
+  else:
+      xep_loai = "Cần cải thiện"
+
+  Khi nào bạn cần sửa? Khi ngưỡng số liệu không đúng thực tế công ty.
+  Chỉ đổi con số, không đụng gì khác.
+
+PHẦN 3 — Vòng lặp (for)
+
+  for ten_file in danh_sach_file:
+      # xử lý từng file...
+      print(f"Đã xử lý: {ten_file}")
+
+  Đọc như văn nói: "Với mỗi file trong danh sách, làm những việc bên dưới."
+
+PHẦN 4 — Đọc và xử lý thông báo lỗi
+
+  Cấu trúc thông báo lỗi:
+    File "code.py", line 5    ← lỗi ở dòng nào
+    FileNotFoundError: ...    ← lỗi là gì
+
+  3 lỗi phổ biến:
+    FileNotFoundError  → Kiểm tra tên file, đường dẫn
+    ModuleNotFoundError → Chạy: pip install tên_thư_viện
+    KeyError: "Tên_cột" → Kiểm tra tên cột trong Excel có khớp không
+
+  Quy trình xử lý:
+    1. Copy toàn bộ thông báo lỗi
+    2. Paste vào Claude + mô tả file của bạn
+    3. Claude giải thích và sửa
+
+PHẦN 5 — Cài thư viện cần thiết (chỉ cài 1 lần)
+
+  pip install pandas openpyxl python-docx
+
+  Thư viện      Dùng cho
+  ──────────────────────────────────────────
+  pandas        Xử lý bảng dữ liệu, Excel
+  openpyxl      Đọc/viết file Excel (.xlsx)
+  python-docx   Đọc/viết file Word (.docx)
+  os, shutil    Quản lý file, thư mục
+
+PHẦN 6 — Chỗ cần sửa trong code Claude viết
+
+  # ← BẠN CẦN SỬA CÁC DÒNG NÀY
+  ten_file_input = "ten_file_cua_ban.xlsx"
+  duong_dan      = "C:/Users/TenCuaBan/Desktop/"
+  ten_cot_ngay   = "Ngày"
+  ten_file_output = "ket_qua.xlsx"
+
+  Cách tìm đường dẫn: Mở thư mục → nhấp thanh địa chỉ → copy.
+  Cách tìm tên cột: Mở Excel → nhìn hàng đầu → copy đúng tên.
+
+BÀI TẬP BUỔI 2:
+  1. Sửa ngưỡng phân loại cho phù hợp tiêu chuẩn công ty.
+  2. Thêm nhân viên vào danh sách ở phần vòng lặp.
+  3. Cố tình sửa sai tên file, xem lỗi, đọc thông báo lỗi.
+  4. Nhờ Claude đọc file Excel thật và in tên cột, số dòng.
+
+────────────────────────────────────────────────────────────────────────────────
+BUỔI 3 — Thực Hành Tác Vụ Văn Phòng Thật Sự
+────────────────────────────────────────────────────────────────────────────────
+
+PHẦN 1 — Quy trình 8 bước làm việc với Claude
+
+  1. XÁC ĐỊNH vấn đề cụ thể (làm tay mất bao lâu?)
+  2. MÔ TẢ cho Claude (dùng template buổi 1)
+  3. NHẬN code từ Claude, đọc lướt 3 khối
+  4. SỬA các biến: đường dẫn, tên file, tên cột
+  5. CHẠY THỬ với 5-10 dòng dữ liệu mẫu trước
+  6. KIỂM TRA kết quả có đúng không
+  7. CHẠY với toàn bộ dữ liệu thật
+  8. NẾU LỖI → paste lỗi vào Claude → lặp từ bước 3
+
+PHẦN 2 — Tác vụ 1: Gộp nhiều file Excel thành 1
+
+  Tình huống: 5 chi nhánh gửi báo cáo mỗi tuần, cần gộp thành 1 file.
+
+  Nhờ Claude:
+    "Viết code Python gộp tất cả file Excel trong thư mục
+    C:/BaoCao/Tuan1/ thành 1 file. Thêm cột Nguon ghi tên file
+    gốc. Lưu kết quả ra tong_hop.xlsx cùng thư mục."
+
+  Code mẫu (chỉ sửa phần CẤU HÌNH):
+    thu_muc = "C:/BaoCao/Tuan1/"    # ← SỬA
+    file_output = "tong_hop.xlsx"
+
+PHẦN 3 — Tác vụ 2: Lọc và phân tích dữ liệu Excel
+
+  Tình huống: Lọc đơn hàng chưa thanh toán, tính tổng tiền còn nợ.
+
+  Nhờ Claude:
+    "Viết code Python đọc file don_hang.xlsx. Cột E là Trạng thái
+    (Đã thanh toán / Chưa thanh toán), cột F là Số tiền. Lọc dòng
+    chưa thanh toán, tính tổng còn nợ, xuất ra chua_thanh_toan.xlsx."
+
+PHẦN 4 — Tác vụ 3: Đổi tên hàng loạt file
+
+  Tình huống: 200 file ảnh hóa đơn tên lộn xộn, đổi theo format chuẩn.
+
+  Nhờ Claude:
+    "Viết code Python đổi tên tất cả file .jpg trong C:/HoaDon/
+    theo format HD_YYYY-MM-DD_STT.jpg. Trước khi đổi, in danh
+    sách tên cũ → tên mới để tôi kiểm tra."
+
+  LƯU Ý: Luôn yêu cầu in danh sách trước khi thực sự đổi tên!
+
+PHẦN 5 — Tác vụ 4: Tạo báo cáo Word tự động
+
+  Tình huống: Mỗi tháng tạo báo cáo Word theo mẫu, chỉ thay số liệu.
+
+  Nhờ Claude:
+    "Viết code Python tạo file Word báo cáo tháng. Tiêu đề Báo Cáo
+    Doanh Thu Tháng [tháng]/[năm], bảng 3 cột, đoạn tổng kết.
+    Dữ liệu từ thang_5.xlsx. Lưu ra BaoCao_T5_2024.docx."
+
+PHẦN 6 — Mở rộng: Các tác vụ có thể tự động hóa
+
+  Quản lý file:
+    - Sắp xếp file vào thư mục theo ngày tháng
+    - Tìm và xóa file trùng lặp
+    - Nén file cũ hơn 30 ngày vào .zip
+
+  Xử lý dữ liệu:
+    - Đối chiếu 2 file Excel tìm khác biệt
+    - Tách 1 file lớn thành nhiều file nhỏ
+    - Tự động tô màu ô theo giá trị
+
+  Báo cáo:
+    - Tạo biểu đồ từ Excel
+    - Xuất báo cáo PDF
+    - Tạo slide PowerPoint từ dữ liệu
+
+BÀI TẬP BUỔI 3:
+  Chọn 1 việc đang làm tay tại công ty (mất 15-60 phút/lần, lặp hàng tuần/tháng,
+  dữ liệu ở dạng Excel hoặc file) → thực hiện theo đúng quy trình 8 bước.
+
+════════════════════════════════════════════════════════════════════════════════
+TỔNG KẾT 3 BUỔI
+════════════════════════════════════════════════════════════════════════════════
+
+  Buổi  Học gì                                          Làm được gì
+  ─────────────────────────────────────────────────────────────────────────────
+  1     Máy tính, biến, kiểu dữ liệu, cách hỏi Claude   Chạy code, sửa biến
+  2     Đọc code, điều kiện, vòng lặp, xử lý lỗi        Sửa lỗi, hiểu code
+  3     4 tác vụ văn phòng thực tế, quy trình Claude     Tự động hóa việc thật
+
+CÂU HỎI THƯỜNG GẶP:
+
+  "Cần học thêm gì sau 3 buổi?"
+  → Không cần lý thuyết thêm. Gặp vấn đề thật → nhờ Claude giải quyết.
+
+  "Không hiểu code Claude viết thì sao?"
+  → Hỏi Claude: "Giải thích code này bằng tiếng Việt đơn giản, từng bước."
+
+  "Muốn thêm tính năng vào code?"
+  → Nói với Claude: "Code đang làm được X, tôi muốn thêm Y. Sửa lại giúp tôi."
+
+  "Có phải nhớ các lệnh không?"
+  → Không. Claude nhớ thay bạn. Bạn chỉ cần nhớ CÁI GÌ có thể làm được
+    và CÁCH MÔ TẢ yêu cầu rõ ràng.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ok, tốt. bạn hãy xuất bản nội dung trên thành định dạng .ipynb
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Đã tạo file gen_notebook.py và chạy để sinh ra file:
+
+  hoc_lap_trinh_van_phong.ipynb
+  → 47 cells (markdown + code)
+  → Lưu tại: Desktop/claude/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+hướng dẫn tôi cách mở file dễ nhất
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CÁCH MỞ DỄ NHẤT: VS CODE (đã cài rồi)
+
+  Bước 1: Cài extension Jupyter
+    VS Code → Ctrl+Shift+X → tìm "Jupyter" → Install
+
+  Bước 2: Mở file
+    Chuột phải vào file .ipynb → "Open with Code"
+    Hoặc trong VS Code: Ctrl+O → tìm file → mở
+
+  Bước 3: Chọn kernel (chỉ lần đầu)
+    Góc trên bên phải → "Select Kernel" → chọn "Python 3"
+
+  Chạy từng ô: nhấn ▶ bên trái ô code, hoặc Shift+Enter
+
+  Nếu VS Code hỏi cài thêm (ipykernel...) → nhấn Install và đợi.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[NGƯỜI DÙNG]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ok tôi đã làm được. bây giờ tôi cần xuất file ghi chép lại lịch sử trò
+chuyện với claude code định dạng .txt. bạn xuất file cho tôi
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[CLAUDE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Đã xuất lịch sử trò chuyện ra file:
+
+  lich_su_tro_chuyen.txt
+  → Lưu tại: Desktop/claude/
+
+
+================================================================================
+KẾT THÚC LỊCH SỬ TRÒ CHUYỆN
+================================================================================
