@@ -19,5 +19,5 @@ export function renderMarkdown(content: string): string {
     .replace(/\n\n/g, '</p><p>')
     .replace(/^(?!<[h|u|o|l|t|b|p])(.+)$/gm, '<p>$1</p>')
     .replace(/<p><\/p>/g, '')
-    .replace(/\$\$(.+?)\$\$/gs, '<code class="math">$1</code>')
+    .replace(/\$\$([\s\S]+?)\$\$/g, '<code class="math">$1</code>')
 }
