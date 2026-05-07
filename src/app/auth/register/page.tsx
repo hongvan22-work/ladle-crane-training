@@ -60,13 +60,13 @@ export default function RegisterPage() {
               { label: 'Xác nhận mật khẩu', key: 'confirm', type: 'password', placeholder: '••••••••' },
             ].map(field => (
               <div key={field.key}>
-                <label className="block text-sm text-gray-400 mb-1">{field.label}</label>
+                <label className="block text-sm text-stone-600 mb-1">{field.label}</label>
                 <input
                   type={field.type}
                   required
                   value={form[field.key as keyof typeof form]}
                   onChange={e => setForm(p => ({ ...p, [field.key]: e.target.value }))}
-                  className="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-steel-500 text-sm"
+                  className="w-full bg-white border border-amber-300 rounded-lg px-4 py-2.5 text-stone-900 focus:outline-none focus:border-amber-500 text-sm"
                   placeholder={field.placeholder}
                 />
               </div>

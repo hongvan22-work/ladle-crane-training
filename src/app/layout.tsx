@@ -20,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="min-h-screen">
             {children}
           </main>
-          <footer className="bg-gray-900 border-t border-gray-800 py-8 mt-16">
-            <div className="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-              <p>© 2026 Ladle Crane Training. Giáo trình: DINH VAN TOAN</p>
+          <footer className="bg-white border-t border-amber-200 py-8 mt-16">
+            <div className="max-w-7xl mx-auto px-4 text-center text-stone-500 text-sm">
+              <p>© 2026 Ladle Crane Training Portal</p>
               <p className="mt-1">Built with Claude Code · Deployed on Railway</p>
             </div>
           </footer>

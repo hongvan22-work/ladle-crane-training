@@ -45,24 +45,24 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">Email</label>
+              <label className="block text-sm text-stone-600 mb-1">Email</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={e => setForm(p => ({ ...p, email: e.target.value }))}
-                className="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-steel-500 text-sm"
+                className="w-full bg-white border border-amber-300 rounded-lg px-4 py-2.5 text-stone-900 focus:outline-none focus:border-amber-500 text-sm"
                 placeholder="email@example.com"
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">Mật khẩu</label>
+              <label className="block text-sm text-stone-600 mb-1">Mật khẩu</label>
               <input
                 type="password"
                 required
                 value={form.password}
                 onChange={e => setForm(p => ({ ...p, password: e.target.value }))}
-                className="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-steel-500 text-sm"
+                className="w-full bg-white border border-amber-300 rounded-lg px-4 py-2.5 text-stone-900 focus:outline-none focus:border-amber-500 text-sm"
                 placeholder="••••••••"
               />
             </div>
