@@ -32,7 +32,7 @@ export default async function QuizPage({ params }: { params: { chapterId: string
       <QuizClient
         quizzes={chapter.quizzes}
         chapterId={chapter.id}
-        existingResults={existingResults}
+        existingResults={[]}
       />
     </div>
   )

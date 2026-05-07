@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <footer className="bg-white border-t border-amber-200 py-8 mt-16">
             <div className="max-w-7xl mx-auto px-4 text-center text-stone-500 text-sm">
               <p>© 2026 Ladle Crane Training Portal</p>
-              <p className="mt-1">Built with Claude Code · Deployed on Railway</p>
+              <p className="mt-1">Designed by hvan · Built with Claude Code · Deployed on Railway</p>
             </div>
           </footer>
         </Providers>
