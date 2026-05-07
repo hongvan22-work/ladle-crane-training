@@ -78,11 +78,6 @@ export default function LoginPage() {
             </Link>
           </div>
 
-          <div className="mt-6 p-3 bg-gray-800 rounded-lg text-xs text-gray-500">
-            <div className="font-semibold text-gray-400 mb-1">Tài khoản demo:</div>
-            <div>Admin: admin@ladlecrane.com / admin123</div>
-            <div>Student: student@ladlecrane.com / student123</div>
-          </div>
         </div>
       </div>
     </div>
