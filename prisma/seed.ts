@@ -689,7 +689,7 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
     part: 'G',
     order: 9,
     title: 'Chiến Lược Bán Hàng & Phân Tích Đối Thủ Cạnh Tranh',
-    summary: 'Các "ông trùm" cẩu thép toàn cầu, điểm mạnh/yếu của từng đối thủ, và chiến lược định vị trong thị trường cầu trục luyện kim.',
+    summary: 'Các "ông trùm" cẩu thép toàn cầu, điểm mạnh/yếu của từng đối thủ, và chiến lược định vị cho V trong thị trường cầu trục luyện kim.',
     content: `# Chuyên Đề 17–19: Chiến Lược Bán Hàng & Phân Tích Đối Thủ
 
 ## Các "Ông Trùm" Cẩu Thép Toàn Cầu
@@ -701,7 +701,7 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
 - Hệ thống CMS (Crane Management System) tiên tiến nhất thị trường
 - Anti-sway SWAY-CONTROL® được coi là tiêu chuẩn ngành
 
-**Điểm yếu (cơ hội cho chúng ta):**
+**Điểm yếu (cơ hội cho V):**
 - Giá cao hơn 30–50% so với đối thủ Châu Á
 - Lead time dài (12–18 tháng)
 - After-sales service tại Việt Nam mỏng
@@ -726,11 +726,11 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
 - Khách hàng cao cấp (Samsung, POSCO) lo ngại về chất lượng dài hạn
 - Hệ thống automation và CMS còn kém so với Konecranes/Demag
 
-## Định Vị Chiến Lược
+## Định Vị Chiến Lược Cho V
 
 **Vị trí mục tiêu:** "Chất lượng châu Âu, giá cạnh tranh châu Á"
 
-| Tiêu chí | Konecranes | ZPMC | **Mục tiêu** |
+| Tiêu chí | Konecranes | ZPMC | **V (mục tiêu)** |
 |---------|-----------|------|------------------------|
 | Chất lượng kết cấu | ★★★★★ | ★★★ | ★★★★ |
 | Hệ thống điều khiển | ★★★★★ | ★★★ | ★★★★ |
@@ -752,10 +752,10 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
 
 **Giai đoạn 3 (Năm 5+): Xuất khẩu khu vực**
 - ASEAN (Indonesia, Thái Lan, Philippines) có nhu cầu tương tự
-- Chúng ta có lợi thế: Hiểu văn hóa châu Á, gần địa lý`,
+- V có lợi thế: Hiểu văn hóa châu Á, gần địa lý`,
     quizzes: [
       {
-        question: 'Đâu là lợi thế cạnh tranh lớn nhất so với Konecranes tại thị trường Việt Nam?',
+        question: 'Đâu là lợi thế cạnh tranh lớn nhất của V so với Konecranes tại thị trường Việt Nam?',
         options: [
           'Chất lượng kỹ thuật cao hơn',
           'Thương hiệu lâu đời hơn',
@@ -763,10 +763,10 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
           'Hệ thống CMS tiên tiến hơn'
         ],
         correctAnswer: 2,
-        explanation: 'Konecranes có after-sales service mỏng tại Việt Nam và giá cao hơn 30–50%. Chúng ta có thể cạnh tranh bằng dịch vụ tại chỗ nhanh chóng và giá hợp lý hơn.'
+        explanation: 'Konecranes có after-sales service mỏng tại Việt Nam và giá cao hơn 30–50%. V có thể cạnh tranh bằng dịch vụ tại chỗ nhanh chóng và giá hợp lý hơn.'
       },
       {
-        question: 'Theo chiến lược đề xuất, nên bắt đầu tấn công phân khúc nào trước?',
+        question: 'Theo chiến lược đề xuất, V nên bắt đầu tấn công phân khúc nào trước?',
         options: [
           'Ladle Crane ngay từ đầu để định vị cao',
           'EAF Loading Crane để xây dựng track record trước',
@@ -774,7 +774,7 @@ Input Shaping:    [Gia tốc 1][Gia tốc 2]─[Giảm tốc 1][Giảm tốc 2]
           'Xuất khẩu sang ASEAN ngay'
         ],
         correctAnswer: 1,
-        explanation: 'EAF Loading Crane ít rủi ro hơn Ladle Crane thuần túy và giúp chúng ta xây dựng kinh nghiệm thực tế, track record, và niềm tin của khách hàng trước khi tấn công phân khúc cao hơn.'
+        explanation: 'EAF Loading Crane ít rủi ro hơn Ladle Crane thuần túy và giúp V xây dựng kinh nghiệm thực tế, track record, và niềm tin của khách hàng trước khi tấn công phân khúc cao hơn.'
       }
     ]
   }
