@@ -6,17 +6,17 @@ Hệ thống đào tạo kỹ thuật chuyên sâu về **Cầu Trục Rót Thé
 
 ## Demo
 
-- **Live URL:** https://ladle-crane-training.railway.app *(cập nhật sau khi deploy)*
+- **Live URL:** https://ladle-crane-training-production.up.railway.app
 - **GitHub:** https://github.com/hongvan22-work/ladle-crane-training
 
 ## Tính Năng
 
-- 9 chuyên đề từ giáo trình 61 trang (PDF gốc: DINH VAN TOAN)
+- 9 chuyên đề từ giáo trình 61 trang về cầu trục luyện kim
 - Hệ thống đăng ký / đăng nhập (NextAuth.js)
 - Theo dõi tiến độ học theo từng chuyên đề
 - Quiz cuối chương với chấm điểm tự động và giải thích đáp án
 - Dashboard cá nhân hóa với thống kê học tập
-- Giao diện responsive, dark theme chuyên nghiệp
+- Giao diện responsive, light theme amber chuyên nghiệp
 
 ## Tech Stack
 
