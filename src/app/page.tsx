@@ -12,12 +12,12 @@ async function getStats() {
 }
 
 const parts = [
-  { key: 'A', label: 'Phần A', title: 'Tổng Quan Nhà Máy Thép', color: 'from-orange-600 to-red-700', icon: '🏭' },
+  { key: 'A', label: 'Phần A', title: 'Tổng Quan Nhà Máy Thép', color: 'from-blue-700 to-blue-900', icon: '🏭' },
   { key: 'B', label: 'Phần B', title: 'Tiêu Chuẩn Thiết Kế FEM', color: 'from-blue-600 to-blue-800', icon: '📐' },
   { key: 'C', label: 'Phần C', title: 'Ladle Crane Chuyên Sâu', color: 'from-steel-600 to-steel-800', icon: '⚙️' },
-  { key: 'D', label: 'Phần D', title: 'Cơ Khí & Điện Đặc Thù', color: 'from-purple-600 to-purple-800', icon: '⚡' },
-  { key: 'E', label: 'Phần E', title: 'Tự Động Hóa & Smart Crane', color: 'from-green-600 to-green-800', icon: '🤖' },
-  { key: 'G', label: 'Phần G', title: 'Chiến Lược Bán Hàng', color: 'from-yellow-600 to-orange-700', icon: '📊' },
+  { key: 'D', label: 'Phần D', title: 'Cơ Khí & Điện Đặc Thù', color: 'from-blue-800 to-navy-800', icon: '⚡' },
+  { key: 'E', label: 'Phần E', title: 'Tự Động Hóa & Smart Crane', color: 'from-blue-600 to-blue-900', icon: '🤖' },
+  { key: 'G', label: 'Phần G', title: 'Chiến Lược Bán Hàng', color: 'from-steel-600 to-steel-700', icon: '📊' },
 ]
 
 export default async function HomePage() {
@@ -26,10 +26,10 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-steel-950 py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,#f14810,transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,#1e40af,transparent_60%)]" />
+      <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-blue-950 py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,#eab308,transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,#1d4ed8,transparent_60%)]" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 text-center">
           <div className="text-6xl mb-6">🏗️</div>
@@ -69,7 +69,7 @@ export default async function HomePage() {
         <h2 className="text-2xl font-bold text-white mb-8 text-center">Nội Dung Chương Trình</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {parts.map(part => (
-            <Link key={part.key} href={`/chapters?part=${part.key}`} className="group card hover:border-steel-700 transition-all">
+            <Link key={part.key} href={`/chapters?part=${part.key}`} className="group card hover:border-steel-600 transition-all">
               <div className={`inline-block bg-gradient-to-r ${part.color} text-white text-xs font-bold px-3 py-1 rounded-full mb-3`}>
                 {part.label}
               </div>
@@ -83,7 +83,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-steel-900 to-gray-900 border-y border-steel-800 py-16">
+      <section className="bg-gradient-to-r from-navy-900 to-blue-950 border-y border-navy-700 py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Bắt Đầu Học Ngay Hôm Nay</h2>
           <p className="text-gray-400 mb-6">Theo dõi tiến độ, làm quiz cuối chương và nhận chứng nhận hoàn thành.</p>

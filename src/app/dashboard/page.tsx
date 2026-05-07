@@ -38,7 +38,7 @@ export default async function DashboardPage() {
         <div className="card text-center">
           <div className="text-4xl font-bold text-steel-400 mb-1">{pct}%</div>
           <div className="text-gray-400 text-sm">Tiến độ hoàn thành</div>
-          <div className="mt-3 bg-gray-800 rounded-full h-2">
+          <div className="mt-3 bg-navy-800 rounded-full h-2">
             <div className="bg-steel-500 h-2 rounded-full transition-all" style={{ width: `${pct}%` }} />
           </div>
           <div className="text-gray-500 text-xs mt-2">{completedCount}/{totalCount} chuyên đề</div>
@@ -62,8 +62,8 @@ export default async function DashboardPage() {
           <div className="space-y-3">
             {recentChapters.map(ch => (
               <Link key={ch.id} href={`/chapters/${ch.id}`}
-                className="flex items-center gap-4 card hover:border-steel-700 transition-all group">
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 font-bold flex-shrink-0">
+                className="flex items-center gap-4 card hover:border-steel-600 transition-all group">
+                <div className="w-10 h-10 bg-navy-800 rounded-full flex items-center justify-center text-gray-400 font-bold flex-shrink-0">
                   {ch.order}
                 </div>
                 <div>
@@ -91,9 +91,9 @@ export default async function DashboardPage() {
         <div className="space-y-2">
           {chapters.map(ch => (
             <Link key={ch.id} href={`/chapters/${ch.id}`}
-              className="flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 transition-all">
+              className="flex items-center gap-3 px-4 py-3 rounded-lg bg-navy-900 hover:bg-navy-800 border border-navy-700 hover:border-navy-600 transition-all">
               <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs
-                ${completedIds.has(ch.id) ? 'bg-green-500 text-white' : 'bg-gray-700 text-gray-400'}`}>
+                ${completedIds.has(ch.id) ? 'bg-green-500 text-white' : 'bg-navy-700 text-gray-400'}`}>
                 {completedIds.has(ch.id) ? '✓' : ch.order}
               </div>
               <span className={`text-sm ${completedIds.has(ch.id) ? 'text-gray-400 line-through' : 'text-gray-300'}`}>

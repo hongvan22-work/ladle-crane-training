@@ -6,13 +6,13 @@ import { authOptions } from '@/lib/auth'
 export const dynamic = 'force-dynamic'
 
 const partMeta: Record<string, { label: string; color: string; icon: string }> = {
-  A: { label: 'Phần A – Tổng Quan Nhà Máy Thép', color: 'bg-orange-600', icon: '🏭' },
+  A: { label: 'Phần A – Tổng Quan Nhà Máy Thép', color: 'bg-blue-700', icon: '🏭' },
   B: { label: 'Phần B – Tiêu Chuẩn Thiết Kế', color: 'bg-blue-600', icon: '📐' },
   C: { label: 'Phần C – Ladle Crane Chuyên Sâu', color: 'bg-steel-600', icon: '⚙️' },
-  D: { label: 'Phần D – Cơ Khí & Điện Đặc Thù', color: 'bg-purple-600', icon: '⚡' },
-  E: { label: 'Phần E – Tự Động Hóa', color: 'bg-green-600', icon: '🤖' },
-  F: { label: 'Phần F – An Toàn & Bảo Trì', color: 'bg-red-600', icon: '🛡️' },
-  G: { label: 'Phần G – Chiến Lược Bán Hàng', color: 'bg-yellow-600', icon: '📊' },
+  D: { label: 'Phần D – Cơ Khí & Điện Đặc Thù', color: 'bg-blue-800', icon: '⚡' },
+  E: { label: 'Phần E – Tự Động Hóa', color: 'bg-blue-900', icon: '🤖' },
+  F: { label: 'Phần F – An Toàn & Bảo Trì', color: 'bg-blue-950', icon: '🛡️' },
+  G: { label: 'Phần G – Chiến Lược Bán Hàng', color: 'bg-steel-700', icon: '📊' },
 }
 
 export default async function ChaptersPage({ searchParams }: { searchParams: { part?: string } }) {
@@ -47,12 +47,12 @@ export default async function ChaptersPage({ searchParams }: { searchParams: { p
 
       {/* Filter by part */}
       <div className="flex flex-wrap gap-2 mb-10">
-        <Link href="/chapters" className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!filterPart ? 'bg-steel-600 text-white' : 'bg-gray-800 text-gray-400 hover:text-white'}`}>
+        <Link href="/chapters" className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!filterPart ? 'bg-steel-600 text-white' : 'bg-navy-800 text-gray-400 hover:text-white'}`}>
           Tất cả
         </Link>
         {Object.keys(partMeta).map(p => (
           <Link key={p} href={`/chapters?part=${p}`}
-            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${filterPart === p ? 'bg-steel-600 text-white' : 'bg-gray-800 text-gray-400 hover:text-white'}`}>
+            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${filterPart === p ? 'bg-steel-600 text-white' : 'bg-navy-800 text-gray-400 hover:text-white'}`}>
             Phần {p}
           </Link>
         ))}
@@ -70,8 +70,8 @@ export default async function ChaptersPage({ searchParams }: { searchParams: { p
                 const done = progressMap[chapter.id]
                 return (
                   <Link key={chapter.id} href={`/chapters/${chapter.id}`}
-                    className="flex items-start gap-4 card hover:border-steel-700 transition-all group">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${done ? 'bg-green-500' : 'bg-gray-700'}`}>
+                    className="flex items-start gap-4 card hover:border-steel-600 transition-all group">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${done ? 'bg-green-500' : 'bg-navy-700'}`}>
                       {done ? '✓' : <span className="text-gray-400 text-sm font-bold">{chapter.order}</span>}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -80,7 +80,7 @@ export default async function ChaptersPage({ searchParams }: { searchParams: { p
                       </h3>
                       <p className="text-gray-500 text-sm mt-1 line-clamp-2">{chapter.summary}</p>
                       <div className="flex items-center gap-3 mt-2">
-                        <span className={`text-xs px-2 py-0.5 rounded ${partMeta[chapter.part]?.color || 'bg-gray-700'} text-white`}>
+                        <span className={`text-xs px-2 py-0.5 rounded ${partMeta[chapter.part]?.color || 'bg-navy-700'} text-white`}>
                           Phần {chapter.part}
                         </span>
                         {chapter._count.quizzes > 0 && (

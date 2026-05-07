@@ -66,7 +66,7 @@ export default function RegisterPage() {
                   required
                   value={form[field.key as keyof typeof form]}
                   onChange={e => setForm(p => ({ ...p, [field.key]: e.target.value }))}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-steel-500 text-sm"
+                  className="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-steel-500 text-sm"
                   placeholder={field.placeholder}
                 />
               </div>
