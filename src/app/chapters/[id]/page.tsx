@@ -4,6 +4,8 @@ import { authOptions } from '@/lib/auth'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import MarkCompleteButton from '@/components/MarkCompleteButton'
+import ReadingProgress from '@/components/ReadingProgress'
+import BackToTop from '@/components/BackToTop'
 import { renderMarkdown } from '@/lib/markdown'
 
 export const dynamic = 'force-dynamic'
@@ -37,6 +39,9 @@ export default async function ChapterPage({ params }: { params: { id: string } }
   const htmlContent = renderMarkdown(chapter.content)
 
   return (
+    <>
+    <ReadingProgress />
+    <BackToTop />
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
@@ -106,5 +111,6 @@ export default async function ChapterPage({ params }: { params: { id: string } }
         ) : <div />}
       </div>
     </div>
+    </>
   )
 }
