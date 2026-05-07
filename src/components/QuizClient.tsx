@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 
 type Quiz = {
@@ -14,6 +14,54 @@ type QuizResult = {
   quizId: string
   answer: number
   isCorrect: boolean
+}
+
+function playSound(type: 'correct' | 'wrong' | 'perfect') {
+  try {
+    const ctx = new (window.AudioContext || (window as any).webkitAudioContext)()
+    const gain = ctx.createGain()
+    gain.connect(ctx.destination)
+
+    if (type === 'correct') {
+      const osc = ctx.createOscillator()
+      osc.connect(gain)
+      osc.type = 'sine'
+      gain.gain.setValueAtTime(0.3, ctx.currentTime)
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5)
+      osc.frequency.setValueAtTime(523, ctx.currentTime)
+      osc.frequency.setValueAtTime(659, ctx.currentTime + 0.15)
+      osc.frequency.setValueAtTime(784, ctx.currentTime + 0.3)
+      osc.start(ctx.currentTime)
+      osc.stop(ctx.currentTime + 0.5)
+    } else if (type === 'wrong') {
+      const osc = ctx.createOscillator()
+      osc.connect(gain)
+      osc.type = 'sawtooth'
+      gain.gain.setValueAtTime(0.2, ctx.currentTime)
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4)
+      osc.frequency.setValueAtTime(220, ctx.currentTime)
+      osc.frequency.setValueAtTime(180, ctx.currentTime + 0.2)
+      osc.start(ctx.currentTime)
+      osc.stop(ctx.currentTime + 0.4)
+    } else if (type === 'perfect') {
+      const notes = [523, 659, 784, 1047]
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator()
+        const g = ctx.createGain()
+        osc.connect(g)
+        g.connect(ctx.destination)
+        osc.type = 'sine'
+        const t = ctx.currentTime + i * 0.12
+        g.gain.setValueAtTime(0.3, t)
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.4)
+        osc.frequency.setValueAtTime(freq, t)
+        osc.start(t)
+        osc.stop(t + 0.4)
+      })
+    }
+  } catch {
+    // Web Audio not supported
+  }
 }
 
 export default function QuizClient({
@@ -35,30 +83,18 @@ export default function QuizClient({
   )
   const [loading, setLoading] = useState(false)
   const [animatingId, setAnimatingId] = useState<string | null>(null)
-  const [elapsed, setElapsed] = useState(0)
-  const timerRef = useRef<NodeJS.Timeout | null>(null)
-
-  useEffect(() => {
-    if (!submitted) {
-      timerRef.current = setInterval(() => setElapsed(e => e + 1), 1000)
-    }
-    return () => { if (timerRef.current) clearInterval(timerRef.current) }
-  }, [submitted])
-
-  const formatTime = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 
   const options = (quiz: Quiz) => quiz.options as string[]
 
-  const handleAnswer = (quizId: string, i: number) => {
+  const handleAnswer = useCallback((quizId: string, i: number) => {
     setAnswers(prev => ({ ...prev, [quizId]: i }))
     setAnimatingId(quizId)
     setTimeout(() => setAnimatingId(null), 300)
-  }
+  }, [])
 
   const handleSubmit = async () => {
     if (Object.keys(answers).length < quizzes.length) return
     setLoading(true)
-    if (timerRef.current) clearInterval(timerRef.current)
     try {
       const res = await fetch('/api/quiz', {
         method: 'POST',
@@ -71,10 +107,14 @@ export default function QuizClient({
 
       const score = Object.values(data.results as Record<string, boolean>).filter(Boolean).length
       if (score === quizzes.length) {
+        playSound('perfect')
         const confetti = (await import('canvas-confetti')).default
         confetti({ particleCount: 180, spread: 80, origin: { y: 0.6 }, colors: ['#d97706', '#f59e0b', '#fbbf24', '#3b82f6', '#10b981'] })
         setTimeout(() => confetti({ particleCount: 80, spread: 60, origin: { x: 0.1, y: 0.5 } }), 300)
         setTimeout(() => confetti({ particleCount: 80, spread: 60, origin: { x: 0.9, y: 0.5 } }), 500)
+      } else {
+        const hasWrong = Object.values(data.results as Record<string, boolean>).some(v => !v)
+        if (hasWrong) playSound('wrong')
       }
 
       router.refresh()
@@ -88,15 +128,6 @@ export default function QuizClient({
 
   return (
     <div className="space-y-8">
-      {/* Timer */}
-      {!submitted && (
-        <div className="flex justify-end">
-          <span className="text-stone-400 text-sm font-mono bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-            {formatTime(elapsed)}
-          </span>
-        </div>
-      )}
-
       {/* Score banner */}
       {submitted && (
         <div className={`card text-center py-6 ${isPerfect ? 'border-green-400 bg-green-50' : 'border-amber-400 bg-amber-50'}`}>
@@ -104,9 +135,8 @@ export default function QuizClient({
             {score}/{quizzes.length}
           </div>
           <div className="text-stone-600 font-medium">
-            {isPerfect ? '🎉 Xuất sắc! Bạn trả lời đúng tất cả!' : `Bạn đúng ${score} câu – cố lên nhé!`}
+            {isPerfect ? 'Xuất sắc! Bạn trả lời đúng tất cả!' : `Bạn đúng ${score} câu – cố lên nhé!`}
           </div>
-          <div className="text-stone-400 text-sm mt-1">Thời gian: {formatTime(elapsed)}</div>
         </div>
       )}
 
@@ -146,7 +176,10 @@ export default function QuizClient({
                   <button
                     key={i}
                     disabled={submitted}
-                    onClick={() => handleAnswer(quiz.id, i)}
+                    onClick={() => {
+                      handleAnswer(quiz.id, i)
+                      playSound('correct')
+                    }}
                     className={`w-full text-left px-4 py-3 rounded-lg border transition-all text-sm flex items-center gap-2 ${cls} disabled:cursor-not-allowed`}
                   >
                     <span className="font-bold text-stone-500 min-w-[20px]">{String.fromCharCode(65 + i)}.</span>

@@ -12,12 +12,12 @@ async function getStats() {
 }
 
 const parts = [
-  { key: 'A', label: 'Phần A', title: 'Tổng Quan Nhà Máy Thép', color: 'from-blue-500 to-blue-700', icon: '🏭' },
-  { key: 'B', label: 'Phần B', title: 'Tiêu Chuẩn Thiết Kế FEM', color: 'from-amber-500 to-amber-700', icon: '📐' },
-  { key: 'C', label: 'Phần C', title: 'Ladle Crane Chuyên Sâu', color: 'from-amber-600 to-orange-600', icon: '⚙️' },
-  { key: 'D', label: 'Phần D', title: 'Cơ Khí & Điện Đặc Thù', color: 'from-blue-600 to-blue-800', icon: '⚡' },
-  { key: 'E', label: 'Phần E', title: 'Tự Động Hóa & Smart Crane', color: 'from-amber-500 to-yellow-600', icon: '🤖' },
-  { key: 'G', label: 'Phần G', title: 'Chiến Lược Bán Hàng', color: 'from-amber-600 to-amber-800', icon: '📊' },
+  { key: 'A', label: 'Phần A', title: 'Tổng Quan Nhà Máy Thép', color: 'from-blue-500 to-blue-700' },
+  { key: 'B', label: 'Phần B', title: 'Tiêu Chuẩn Thiết Kế FEM', color: 'from-amber-500 to-amber-700' },
+  { key: 'C', label: 'Phần C', title: 'Ladle Crane Chuyên Sâu', color: 'from-amber-600 to-orange-600' },
+  { key: 'D', label: 'Phần D', title: 'Cơ Khí & Điện Đặc Thù', color: 'from-blue-600 to-blue-800' },
+  { key: 'E', label: 'Phần E', title: 'Tự Động Hóa & Smart Crane', color: 'from-amber-500 to-yellow-600' },
+  { key: 'G', label: 'Phần G', title: 'Chiến Lược Bán Hàng', color: 'from-amber-600 to-amber-800' },
 ]
 
 export default async function HomePage() {
@@ -32,7 +32,6 @@ export default async function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,#3b82f6,transparent_60%)]" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="text-6xl mb-6">🏗️</div>
           <h1 className="text-4xl md:text-5xl font-bold text-stone-900 mb-4 leading-tight">
             Giáo Trình Đào Tạo<br />
             <span className="text-amber-600">Cầu Trục Rót Thép</span>
@@ -73,7 +72,6 @@ export default async function HomePage() {
               <div className={`inline-block bg-gradient-to-r ${part.color} text-white text-xs font-bold px-3 py-1 rounded-full mb-3`}>
                 {part.label}
               </div>
-              <div className="text-3xl mb-2">{part.icon}</div>
               <h3 className="text-stone-800 font-semibold text-lg group-hover:text-amber-600 transition-colors">
                 {part.title}
               </h3>

@@ -78,8 +78,7 @@ export default async function DashboardPage() {
           </div>
         ) : (
           <div className="card text-center py-12">
-            <div className="text-4xl mb-3">🎉</div>
-            <div className="text-stone-800 font-semibold">Bạn đã hoàn thành tất cả chuyên đề!</div>
+            <div className="text-stone-800 font-semibold text-lg mb-2">Bạn đã hoàn thành tất cả chuyên đề!</div>
             <Link href="/chapters" className="btn-primary mt-4 inline-block">Xem lại chuyên đề</Link>
           </div>
         )}

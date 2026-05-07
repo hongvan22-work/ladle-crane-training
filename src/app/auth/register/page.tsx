@@ -40,14 +40,13 @@ export default function RegisterPage() {
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="text-5xl mb-3">🏗️</div>
-          <h1 className="text-2xl font-bold text-white">Tạo Tài Khoản</h1>
-          <p className="text-gray-400 mt-1">Miễn phí – Truy cập đầy đủ nội dung</p>
+          <h1 className="text-2xl font-bold text-stone-900">Tạo Tài Khoản</h1>
+          <p className="text-stone-500 mt-1">Miễn phí – Truy cập đầy đủ nội dung</p>
         </div>
 
         <div className="card">
           {error && (
-            <div className="bg-red-900/30 border border-red-700 text-red-300 px-4 py-3 rounded-lg mb-4 text-sm">
+            <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">
               {error}
             </div>
           )}
@@ -76,9 +75,9 @@ export default function RegisterPage() {
             </button>
           </form>
 
-          <div className="mt-4 text-center text-sm text-gray-500">
+          <div className="mt-4 text-center text-sm text-stone-500">
             Đã có tài khoản?{' '}
-            <Link href="/auth/login" className="text-steel-400 hover:text-steel-300">Đăng nhập</Link>
+            <Link href="/auth/login" className="text-amber-600 hover:text-amber-700 font-medium">Đăng nhập</Link>
           </div>
         </div>
       </div>

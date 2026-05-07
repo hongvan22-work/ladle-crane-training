@@ -44,12 +44,12 @@ export default async function ChapterPage({ params }: { params: { id: string } }
     <BackToTop />
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-        <Link href="/" className="hover:text-gray-300">Trang chủ</Link>
+      <nav className="flex items-center gap-2 text-sm text-stone-500 mb-8">
+        <Link href="/" className="hover:text-stone-700">Trang chủ</Link>
         <span>/</span>
-        <Link href="/chapters" className="hover:text-gray-300">Chuyên đề</Link>
+        <Link href="/chapters" className="hover:text-stone-700">Chuyên đề</Link>
         <span>/</span>
-        <span className="text-gray-300">Chuyên Đề {chapter.order}</span>
+        <span className="text-stone-700">Chuyên Đề {chapter.order}</span>
       </nav>
 
       {/* Header */}
@@ -60,10 +60,10 @@ export default async function ChapterPage({ params }: { params: { id: string } }
             <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">Đã hoàn thành</span>
           )}
         </div>
-        <h1 className="text-3xl font-bold text-white mb-3">
+        <h1 className="text-3xl font-bold text-stone-900 mb-3">
           Chuyên Đề {chapter.order}: {chapter.title}
         </h1>
-        <p className="text-gray-400">{chapter.summary}</p>
+        <p className="text-stone-600">{chapter.summary}</p>
       </div>
 
       {/* Content */}
@@ -86,7 +86,7 @@ export default async function ChapterPage({ params }: { params: { id: string } }
         </div>
       ) : (
         <div className="card mb-8 text-center">
-          <p className="text-gray-400 mb-4">Đăng nhập để theo dõi tiến độ và làm quiz</p>
+          <p className="text-stone-500 mb-4">Đăng nhập để theo dõi tiến độ và làm quiz</p>
           <Link href="/auth/login" className="btn-primary">Đăng nhập ngay</Link>
         </div>
       )}
@@ -94,17 +94,17 @@ export default async function ChapterPage({ params }: { params: { id: string } }
       {/* Navigation */}
       <div className="grid grid-cols-2 gap-4">
         {prevChapter ? (
-          <Link href={`/chapters/${prevChapter.id}`} className="card hover:border-gray-600 transition-all group">
-            <div className="text-gray-500 text-xs mb-1">← Chuyên đề trước</div>
-            <div className="text-white text-sm font-medium group-hover:text-steel-400 transition-colors">
+          <Link href={`/chapters/${prevChapter.id}`} className="card hover:border-amber-400 transition-all group">
+            <div className="text-stone-400 text-xs mb-1">← Chuyên đề trước</div>
+            <div className="text-stone-800 text-sm font-medium group-hover:text-amber-600 transition-colors">
               {prevChapter.order}. {prevChapter.title}
             </div>
           </Link>
         ) : <div />}
         {nextChapter ? (
-          <Link href={`/chapters/${nextChapter.id}`} className="card hover:border-gray-600 transition-all group text-right">
-            <div className="text-gray-500 text-xs mb-1">Chuyên đề tiếp →</div>
-            <div className="text-white text-sm font-medium group-hover:text-steel-400 transition-colors">
+          <Link href={`/chapters/${nextChapter.id}`} className="card hover:border-amber-400 transition-all group text-right">
+            <div className="text-stone-400 text-xs mb-1">Chuyên đề tiếp →</div>
+            <div className="text-stone-800 text-sm font-medium group-hover:text-amber-600 transition-colors">
               {nextChapter.order}. {nextChapter.title}
             </div>
           </Link>

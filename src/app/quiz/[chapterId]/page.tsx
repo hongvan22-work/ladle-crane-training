@@ -25,10 +25,10 @@ export default async function QuizPage({ params }: { params: { chapterId: string
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-2xl font-bold text-white mb-2">
+      <h1 className="text-2xl font-bold text-stone-900 mb-2">
         Quiz: Chuyên Đề {chapter.order}
       </h1>
-      <p className="text-gray-400 mb-8">{chapter.title}</p>
+      <p className="text-stone-600 mb-8">{chapter.title}</p>
       <QuizClient
         quizzes={chapter.quizzes}
         chapterId={chapter.id}
